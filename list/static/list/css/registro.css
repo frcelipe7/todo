@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {padding: 0; margin: 0; font-family: 'Poppins', sans-serif; }
+.content {justify-content: center; align-items: center; display: flex; flex-direction: row-reverse; width: 100%; height: 100vh;}
+
+.form
+{
+    background-color: #fbebe7;
+    border-radius: 20px;
+    height: 420px;
+    width: 600px;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+}
+
+.form .message
+{
+    position: absolute;
+    top: 75px;
+    left: 50px;
+}
+
+.form h1
+{
+    position: absolute;
+    top: 20px;
+    font-weight: 600;
+    color: #da3c14;
+}
+
+.form-group {position: relative;}
+
+.form-group label
+{
+    position: absolute;
+    left: 15px;
+    top: -9px;
+    padding: 0px 5px;
+    transition: .2s;
+    font-size: 10pt;
+    color: #da3c1400;
+}
+
+.form form
+{
+    width: 100%;
+    height: auto;
+    margin-top: 120px;
+}
+
+.form form input[type=text],
+.form form input[type=password],
+.form form input[type=email]
+{
+    width: 100%;
+    height: 30px;
+    font-size: 13pt;
+    background: none;
+    color: #070707;
+    border: none;
+    border: 2px solid #27333900;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #fda58f;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form form input:focus
+{
+    border: 2px solid #da3c14;
+    border-radius: 5px;
+    padding-left: 18px;
+}
+
+.form form input:not(:placeholder-shown) ~ label
+{
+    background-color: #fbebe7;
+    color: #da3c14;
+}
+
+.form form input[type=text]:hover,
+.form form input[type=password]:hover,
+.form form input[type=email]:hover
+{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding-left: 18px;
+}
+
+.form form input:not(:placeholder-shown)
+{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding-left: 18px;
+}
+
+
+input::-webkit-input-placeholder { 
+    color: #070707;
+}
+
+.form form input[type=submit]
+{
+    background-color: #da3c14;
+    border: none;
+    color: #fbebe7;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    font-size: 13pt;
+    transition: .3s;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.form form input[type=submit]:hover
+{
+    background-color: #7e1c03;
+    color: #ffffff;
+}

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {font-family: 'Poppins', sans-serif; font-weight: 400; padding: 0; margin: 0;}
+
+.top
+{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content:space-between;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.483);
+    padding: 0px;
+}
+
+.top .logo_and_links, 
+.top .logo_and_links .logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    flex-direction: row;
+}
+
+.logo {cursor: pointer; padding: 0 15px; margin-left: 25px;}
+
+.logo h3 {margin: 0; font-weight: 400;}
+
+.logo svg {width: 30px; height: 30px; color: #da3c14;}
+
+.link_navegacao {margin-left: 10px;}
+
+.top_link
+{
+    height: 50px;
+    margin: 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    transition: .1s;
+    border: none;
+    text-decoration: none;
+    color: #da3c14;
+}
+
+.top_link:hover
+{
+    border-bottom: 1px solid #da3c14;
+    background-color: #fef7f7ad;
+    color: #da3c14;
+}
+
+.links_login_register {margin-right: 40px;}
+
+.link_navegacao, .links_login_register {display: flex;}
+
+.login_register
+{
+    background-color: #fce9e3;
+    border-radius: 3px;
+    height: 40px;
+    margin: auto;
+    margin-left: 5px;
+    color: #da3c14;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+.login_register:hover
+{
+    border: none;
+    background-color: #da3c14;
+    color: #fce9e3;
+}
+
+@media (max-width: 750px) {
+    .link_navegacao {display: none;}
+    .links_login_register {margin-right: 30px;}
+    .logo {margin-left: 5px;}
+    .listas {flex-wrap: wrap; width: 100%}
+    .listas .list {width: 100%; margin: 10px; min-width: 200px}
+}
+
+/* cor pra fazer modo noturno = #313036 */
+.display, html
+{
+    background-color: #f2f2f2;
+}
+
+.display
+{
+    display: flex;
+    width: 100%;
+    padding-top: 50px;
+    flex-direction: column;
+}
+
+.display form
+{
+    margin: 21px auto;
+    padding: 0;
+}
+
+.display form input[type=text]
+{
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #da3c14;
+    height: 30px;
+    padding: 0px 10px;
+    margin: 0;
+    outline: none;
+}
+
+.display form input[type=text]:focus
+{
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #da3c14;
+}
+
+.display form input[type=submit]
+{
+    border-radius: 0 20px 20px 0;
+    border: 1px solid #da3c14;
+    height: 32.2px;
+    padding: 0px 10px;
+    margin-left: -5px;
+    background: #da3c14;
+    color: #f2f2f2;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.listas
+{
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.list
+{
+    background-color: #da3c14;
+    width: 250px;
+    max-width: 350px;
+    margin: 10px;
+    position: relative;
+    padding: 10px;
+    color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.list h3 {margin-top: 0px; border-bottom: 1px solid #f2f2f2; margin-bottom: 0px;}
+
+.alert
+{
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+    top: 10px;
+    right: 10px;
+    border: 1.5px solid #f2f2f2;
+}
+
+.alert_do {background-color: rgb(255, 0, 0);}
+.alert_doing {background-color: rgb(218, 230, 0);}
+.alert_done {background-color: rgb(0, 224, 0);}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    position: relative;
+    margin-top: 7px;
+}
+
+li
+{
+    min-width: 70px;
+    border-radius: 5px;
+    color: #313036;
+    list-style: none;
+    background-color: #f2f2f2;
+    padding: 10px 5px;
+    transition: .3s;
+}

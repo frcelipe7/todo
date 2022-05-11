@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {font-family: 'Poppins', sans-serif; font-weight: 400; padding: 0; margin: 0;}
+
+.top
+{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content:space-between;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: home_animation_move_down 1s;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.483);
+    padding: 0px;
+}
+
+@keyframes home_animation_move_down {
+    0% {margin-top: -50px;}
+    100% {margin-top: 0px;}
+}
+
+.top .logo_and_links, 
+.top .logo_and_links .logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    flex-direction: row;
+}
+
+.logo {cursor: pointer; padding: 0 15px; margin-left: 25px;}
+
+.logo h3 {margin: 0; font-weight: 400;}
+
+.logo svg {width: 30px; height: 30px; color: #da3c14;}
+
+.link_navegacao {margin-left: 10px;}
+.menu_mobile {display: none}
+.top_link
+{
+    height: 50px;
+    margin: 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    transition: all 465.854ms ease 0ms;
+    border: none;
+    text-decoration: none;
+    color: #da3c14;
+}
+
+.top_link:hover
+{
+    border-bottom: 1px solid #da3c14;
+    background-color: #fef7f7ad;
+    color: #da3c14;
+}
+
+.links_login_register {margin-right: 40px;}
+
+.link_navegacao, .links_login_register {display: flex;}
+
+.login_register
+{
+    background-color: #fce9e3;
+    border-radius: 3px;
+    height: 40px;
+    margin: auto;
+    margin-left: 5px;
+    color: #da3c14;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+.login_register:hover
+{
+    border: none;
+    background-color: #da3c14;
+    color: #fce9e3;
+}
+
+@media (max-width: 750px) {
+    .links_login_register {margin-right: 30px;}
+    .logo {margin-left: 5px; width: auto; padding: 0px;}
+    .logo h3 {font-size: 14pt;}
+}
+@media (max-width: 550px) {
+    .top {justify-content: space-around;}
+    .link_navegacao {display: none;}
+    .menu_mobile {display: block; display: flex; align-items: center; cursor: pointer;}
+    .menu_mobile svg {width: 40px; height: 40px;}
+}
