@@ -69,8 +69,6 @@ def todo_list_view(request):
     for done in all_done_user:
         timestamp = datetime.strptime(done.timestamp, "%d/%m/%Y %H:%M")
         expirationDay = timestamp + timedelta(days=1)
-        print(f"    expirationDay: {expirationDay}    =-=-=-=-=-=-=-")
-        print(f'    timestamp: {timestamp}    =-=-=-=-=-=-=-')
         if datetime.now() > expirationDay:
             print('é maior')
             List.objects.get(id=done.id).delete()
@@ -109,7 +107,7 @@ def save_list_edit(request, id):
         print(list_change_situation)
         list_change_situation.situation = situation
         if situation == "Done":
-            list_change_situation.timestamp = datetime.now()
+            list_change_situation.timestamp = datetime.now().strftime('%d/%m/%Y %H:%M')
         list_change_situation.save()
 
     return HttpResponseRedirect(reverse("todo_list"))
